@@ -16,5 +16,5 @@ safe-build:
 	cd nodejs-docker \
   && docker build --build-arg node_version=$(NODE_VERSION) -t nodejs . \
   && cd .. \
-  && ./safe-build.sh merklizer.xyz 2>&1
+  && ./safe-build.sh ethswarm.merklizer.xyz 2>&1
 
