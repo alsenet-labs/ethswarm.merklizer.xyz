@@ -14,7 +14,7 @@ docker run --name $PACKAGE --mount source=$PACKAGE,destination=/home/nodejs/src/
 set -x
 cd src/$PACKAGE
 if [ -d .git ] ; then
-  git pull --recurse-submodules
+  git submodule update --recursive --remote
 else 
   git clone --recursive $(git config --get remote.origin.url) .
 fi
